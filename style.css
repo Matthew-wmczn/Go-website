@@ -1,0 +1,44 @@
+
+body {
+    font-family: "Domine", serif;
+    background-color: white;
+    color:black;
+    font-size: 1vw;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;  
+    flex-direction: column;
+
+}
+
+header {
+    background-color:white;
+    padding: 0.5vw 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    font-size: 0.8vw;
+    top:0;
+    z-index:1000;
+
+}
+
+.logo-image{
+    height: 3.5vw;
+    width: auto;
+    margin-left: 1vw;
+}
+
+.nav-functions {
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    margin-left: 20px; 
+    text-decoration: none;
+    color: black;     
+}
+
+
+
+
+
