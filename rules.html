@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Go Website Rules Page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Domine:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/favicon" href="Images/favicon.png">
+</head>
+
+<body>
+
+    <!--navigation bar-->
+    <header>
+        <a href="index.html">
+        <div class="logo">
+            <img src="images/logo.png" alt="Go Website Logo" class="logo-image">
+        </div>
+        </a>
+
+        <nav>
+            
+             <a href="rules.html" class="nav-functions">Gameplay</a>
+             <a href="history.html" class="nav-functions">History</a>
+             <a href="players.html" class="nav-functions">Modern Players</a>
+            
+        </nav>    
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="slideshow-layout">
+        
+        <!-- Main Section Title -->
+        <h1 class="page-title">Section title</h1>
+
+        <!-- Content Section -->
+        <div class="slideshow-container">
+
+            <div class="description-column">
+                <p id="slide-description">
+                    Words descriptions Words descriptions Words descriptions Words descriptions...
+                </p>
+            </div>
+
+
+            <div class="image-column">
+                <h2 id="slide-subtitle" class="image-subtitle">subtitle</h2>
+                <div class="image-wrapper">
+                    <img id="slide-image" src="images/player1.jpg" alt="Player Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Corousel Dot Function -->
+        <div class="carousel-dots" id="dots-container">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>@2026 ECCMA DT Go Project</p>
+    </footer>
+
+    <script src="rules.js"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@ body {
 
 }
 
+/* Navigation bar */
 header {
     background-color:white;
     padding: 0.5vw 0;
@@ -21,6 +22,7 @@ header {
     font-size: 0.8vw;
     top:0;
     z-index:1000;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2);    
 
 }
 
@@ -38,7 +40,171 @@ header {
     color: black;     
 }
 
+ .nav-functions:hover,
+ .nav-functions.active {
+    color: grey;
+    border-bottom: 2px solid grey;
+}
+
+/* Main page Section */
+.hero-section {
+    background-color: white; 
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4vw;
+    align-items: center;
+    padding: 4vw 6vw;
+}
+
+.hero-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-self: flex-start;      
+    margin-top: -1.5vw;          
+}
+
+.hero-title {
+    font-size: 3.5vw;
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 2vw 0;
+    color: #111;
+}
+
+.hero-subtitle {
+    font-size: 1.1vw;
+    color: #333;
+    margin: 0;
+}
+
+
+.hero-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vw;
+}
+
+.feature-card {
+    background-color: #aebbc3;
+    background-size: cover;
+    background-position: center;
+    height: 9vw;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 2vw;
+    text-decoration: none;
+    color: white;
+    font-size: 2.2vw;
+    font-weight: 400;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.15);
+}
 
 
 
+/* --- Footer --- */
+footer {
+    padding: 1vw 2vw;
+    font-size: 0.9vw;
+    color: #222;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2);  
+}
 
+/* Content Page Slideshow Layout */
+.slideshow-layout {
+    background-color: #ebf0f2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 8vw 2vw 8vw;
+}
+
+.page-title {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 3.5vw;
+    font-weight: 400;
+    margin: 0 0 1vw 0;
+    color: #111;
+}
+
+.slideshow-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5vw;
+    align-items: flex-start;
+}
+
+/* Description Column Content Page */
+.description-column {
+    font-size: 1vw;
+    line-height: 1.7;
+    color: #222;
+}
+
+/* Image Column Content Page */
+.image-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-subtitle {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 2vw;
+    font-weight: 400;
+    margin: 0 0 1.2vw 0;
+    color: #111;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #aebbc3;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    margin-top: 3vw;
+    padding-bottom: 1vw;
+}
+
+.dot {
+    width: 1.1vw;
+    height: 1.1vw;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0.3;
+}
+
+.dot:hover {
+    opacity: 0.7;
+}
+
+.dot.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
