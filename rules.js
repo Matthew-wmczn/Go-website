@@ -38,9 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         imageEl.src = data.imageSrc;
         imageEl.alt = data.subtitle;
 
-        // Update active dot styling
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
+
     }
 
     // click listeners for dots

@@ -21,8 +21,7 @@ header {
     position: sticky;
     font-size: 0.8vw;
     top:0;
-    z-index:1000;
-    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2);    
+    z-index:1000;   
 
 }
 
@@ -79,7 +78,7 @@ header {
     margin: 0;
 }
 
-
+/**/
 .hero-cards-container {
     display: flex;
     flex-direction: column;
@@ -91,7 +90,6 @@ header {
     background-size: cover;
     background-position: center;
     height: 9vw;
-    border-radius: 6px;
     display: flex;
     align-items: center;
     padding-left: 2vw;
@@ -99,13 +97,10 @@ header {
     color: white;
     font-size: 2.2vw;
     font-weight: 400;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
 
-.feature-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.15);
-}
+
 
 
 
@@ -113,8 +108,7 @@ header {
 footer {
     padding: 1vw 2vw;
     font-size: 0.9vw;
-    color: #222;
-    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2);  
+    color: #222; 
 }
 
 /* Content Page Slideshow Layout */
@@ -192,15 +186,5 @@ footer {
     background-color: #000000;
     border-radius: 50%;
     cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    opacity: 0.3;
 }
 
-.dot:hover {
-    opacity: 0.7;
-}
-
-.dot.active {
-    opacity: 1;
-    transform: scale(1.1);
-}
