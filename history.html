@@ -11,54 +11,70 @@
 
 <body>
 
-    <!--navigation bar-->
+    <!-- Navigation Bar -->
     <header>
         <a href="index.html">
-        <div class="logo">
-            <img src="images/logo.png" alt="Go Website Logo" class="logo-image">
-        </div>
+            <div class="logo">
+                <img src="images/logo.png" alt="Go Website Logo" class="logo-image">
+            </div>
         </a>
 
         <nav>
-            
              <a href="rules.html" class="nav-functions">Gameplay</a>
-             <a href="history.html" class="nav-functions">History</a>
+             <a href="history.html" class="nav-functions active">History</a>
              <a href="players.html" class="nav-functions">Modern Players</a>
-            
         </nav>    
     </header>
 
-    <!-- Main Content Layout -->
-    <main class="slideshow-layout">
+    <!-- Main Content Layout Option 2 -->
+    <main class="content-page-main">
         
-        <!-- Main Section Title -->
-        <h1 class="page-title">History</h1>
+        <!-- Hero Banner Slideshow Header -->
+        <section class="hero-banner">
+            <img id="banner-image" src="images/ancient.png" alt="History Banner" class="banner-bg-image">
+            <div class="banner-overlay">
+                <h1 class="banner-title">History</h1>
+            </div>
 
-        <!-- Content Section -->
-        <div class="slideshow-container">
+            <!-- Carousel Dots for Image Banner -->
+            <div class="carousel-dots" id="dots-container">
+                <span class="dot" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+                <span class="dot" data-index="3"></span>
+            </div>
+        </section>
 
-            <div class="description-column">
-                <p id="slide-description">
-                    Go is widely recognized as the oldest continuously played board game in human history, originating in China over 3,000 to 4,000 years ago under its original name, Weiqi (围棋, literally 'encircling game'). Legend attributes the creation of the game to the mythical Emperor Yao (c. 2200 BCE), who purportedly commissioned his counselor to design the game to enlighten and discipline his reckless son, Danzhu. Other historical accounts suggest the game evolved from ancient Chinese fortune-telling tools, astronomical star charts, or military strategy boards used by tribal warlords to map out territorial control. By the Zhou and Han dynasties, Weiqi had firmly entrenched itself within Chinese high culture. It was elevated to one of the Four Scholar Arts (Si Yi)—alongside the Qin (zither), Qi (Weiqi), Shu (calligraphy), and Hua (painting). Mastery of Weiqi was considered an essential prerequisite for any refined scholar, bureaucrat, or military commander. Unlike Western chess, which mirrors medieval feudal warfare with specialized social roles, Weiqi reflected classical Daoist and Confucian philosophies: starting from an empty universe, using identical, egalitarian pieces, and prioritizing long-term harmony, spatial efficiency, and flexible balance over brute destruction.
+        <!-- Vertical Sections Content -->
+        <section class="sections-wrapper">
+            <div class="content-block">
+                <h2 class="section-subtitle">Ancient Origins and Legend</h2>
+                <p class="section-description">
+                    Go is widely recognized as the oldest continuously played board game in human history, originating in China over 3,000 to 4,000 years ago under its original name, Weiqi (围棋, literally 'encircling game'). Legend attributes the creation of the game to the mythical Emperor Yao (c. 2200 BCE), who purportedly commissioned his counselor to design the game to enlighten and discipline his reckless son, Danzhu. Other historical accounts suggest the game evolved from ancient Chinese fortune-telling tools, astronomical star charts, or military strategy boards used by tribal warlords to map out territorial control. By the Zhou and Han dynasties, Weiqi had firmly entrenched itself within Chinese high culture. It was elevated to one of the Four Scholar Arts (Si Yi)—alongside the Qin (zither), Qi (Weiqi), Shu (calligraphy), and Hua (painting).
                 </p>
             </div>
 
-
-            <div class="image-column">
-                <h2 id="slide-subtitle" class="image-subtitle">Ancient Origins and Legend</h2>
-                <div class="image-wrapper">
-                    <img id="slide-image" src="images/ancient.png" alt="Player Image">
-                </div>
+            <div class="content-block">
+                <h2 class="section-subtitle">The spread around East Asia</h2>
+                <p class="section-description">
+                    During the 5th and 7th centuries CE, Weiqi crossed maritime trade routes into Korea (where it became known as Baduk) and Japan (where it was named Igo, eventually shortened to Go). In Japan, the game enjoyed royal patronage from the imperial court and samurai aristocracy. The true golden age of Go structure began during the Tokugawa Shogunate in the early 17th century, when the military government established state funding for professional Go academies.
+                </p>
             </div>
-        </div>
 
-        <!-- Corousel Dot Function -->
-        <div class="carousel-dots" id="dots-container">
-            <span class="dot" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-        </div>
+            <div class="content-block">
+                <h2 class="section-subtitle">Modernisation and Global Competition</h2>
+                <p class="section-description">
+                    Following the Meiji Restoration and the collapse of the Shogunate's financial support, Japanese Go reorganized itself into a modern professional system. In 1924, the Nihon Ki-in (Japanese Go Association) was founded, establishing standardized ranking systems (dan grades), regulated match timers, and formal tournament circuits. For most of the 20th century, Tokyo served as the global epicenter of high-level Go, attracting top talent from across East Asia.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2 class="section-subtitle">The Artificial Intelligence Revolution</h2>
+                <p class="section-description">
+                    For decades, computer scientists regarded Go as the ultimate holy grail of Artificial Intelligence research. That consensus was shattered in March 2016 when Google DeepMind’s AlphaGo defeated 18-time world champion Lee Sedol 4–1 in a historic match in Seoul. A year later, AlphaGo faced Ke Jie—the world’s top-ranked Chinese grandmaster—defeating him 3–0 and revolutionizing modern strategic play.
+                </p>
+            </div>
+        </section>
 
     </main>
 
