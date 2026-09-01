@@ -13,12 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateBannerImage(index) {
         if (!bannerImages[index]) return;
 
-        // Fade effect transition
-        bannerImgEl.style.opacity = "0";
+
         setTimeout(() => {
             bannerImgEl.src = bannerImages[index];
-            bannerImgEl.style.opacity = "0.35";
-        }, 200);
+        });
 
     }
 
