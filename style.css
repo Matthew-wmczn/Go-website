@@ -100,7 +100,17 @@ header {
 
 }
 
+.card-gameplay {
+    background-image: url('images/card-gameplay.jpg');
+}
 
+.card-history {
+    background-image: url('images/card-history.jpg');
+}
+
+.card-players {
+    background-image: url('images/card-players.jpg');
+}
 
 
 
