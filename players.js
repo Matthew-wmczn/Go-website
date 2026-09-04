@@ -27,24 +27,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const descriptionEl = document.getElementById("slide-description");
     const imageEl = document.getElementById("slide-image");
     const dots = document.querySelectorAll(".dot");
+    const slideshowContainer = document.querySelector(".slideshow-container");
 
-    // Function to update the slide content
+    let isAnimating = false;
+
     function updateSlide(index) {
         const data = slideData[index];
-        if (!data) return;
+        if (!data || isAnimating) return;
 
-        subtitleEl.textContent = data.subtitle;
-        descriptionEl.textContent = data.description;
-        imageEl.src = data.imageSrc;
-        imageEl.alt = data.subtitle;
+        isAnimating = true;
 
+        // Fade Out
+        slideshowContainer.classList.add("fading");
 
+        // Update slide content
+        setTimeout(() => {
+            subtitleEl.textContent = data.subtitle;
+            descriptionEl.textContent = data.description;
+            imageEl.src = data.imageSrc;
+            imageEl.alt = data.subtitle;
+
+            // Update active dot styling
+            dots.forEach(dot => dot.classList.remove("active"));
+            if (dots[index]) {
+                dots[index].classList.add("active");
+            }
+
+            // Fade In
+            slideshowContainer.classList.remove("fading");
+            
+            setTimeout(() => {
+                isAnimating = false;
+            }, 300);
+        }, 300);
     }
 
-    // click listeners for dots
+    // Click listeners for dots
     dots.forEach(dot => {
         dot.addEventListener("click", (e) => {
-            const index = parseInt(e.target.getAttribute("data-index"));
+            const index = parseInt(e.target.getAttribute("data-index"), 10);
             updateSlide(index);
         });
     });

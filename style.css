@@ -22,6 +22,7 @@ header {
     font-size: 0.8vw;
     top:0;
     z-index:1000;   
+    border-bottom: 1.5px solid gray;
 
 }
 
@@ -41,9 +42,18 @@ header {
 
  .nav-functions:hover,
  .nav-functions.active {
-    color: grey;
-    border-bottom: 2px solid grey;
+    color: gray;
+    border-bottom: 2px solid gray;
 }
+
+/* --- Footer --- */
+footer {
+    border-top: 1.5px solid gray;
+    padding: 1vw 2vw;
+    font-size: 0.9vw;
+    color: #222; 
+}
+
 
 /* Main page Section */
 .hero-section {
@@ -60,20 +70,20 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; 
-    align-self: flex-start;      
-    margin-top: -1.5vw;          
+    align-self: flex-start;             
 }
 
 .hero-title {
-    font-size: 3.5vw;
-    font-weight: 400;
+    font-size: 4.6vw;
+    font-weight: 420;
+    text-align: center;
     line-height: 1.15;
     margin: 0 0 2vw 0;
     color: #111;
 }
 
 .hero-subtitle {
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     color: #333;
     margin: 0;
 }
@@ -81,15 +91,16 @@ header {
 /**/
 .hero-cards-container {
     display: flex;
+    font-weight: 425;
     flex-direction: column;
     gap: 1.5vw;
 }
 
 .feature-card {
-    background-color: #aebbc3;
     background-size: cover;
     background-position: center;
     height: 9vw;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     padding-left: 2vw;
@@ -98,7 +109,15 @@ header {
     font-size: 2.2vw;
     font-weight: 400;
 
+
 }
+
+.card-text{
+    color: white;
+    background-color: rgba(67, 67, 68, 0.5);
+    border-radius: 0.625vw;
+}
+
 
 .card-gameplay {
     background-image: url('images/card-gameplay.jpg');
@@ -114,12 +133,6 @@ header {
 
 
 
-/* --- Footer --- */
-footer {
-    padding: 1vw 2vw;
-    font-size: 0.9vw;
-    color: #222; 
-}
 
 /* Content Page Slideshow Layout */
 .slideshow-layout {
@@ -144,13 +157,13 @@ footer {
     align-items: flex-start;
 }
 
-/* Description Column Content Page */
+/* Content Page Description Column */
 .description-column {
     font-size: 0.8vw;
     line-height: 1.7;
 }
 
-/* Image Column Content Page */
+/* Content Page Image Column */
 .image-column {
     display: flex;
     flex-direction: column;
@@ -196,5 +209,27 @@ footer {
     background-color: #000000;
     border-radius: 50%;
     cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0.3;
 }
 
+.dot:hover {
+    opacity: 0.7;
+}
+
+.dot.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Fade Transition For Content Page */
+.description-column,
+.image-column {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.slideshow-container.fading .description-column,
+.slideshow-container.fading .image-column {
+    opacity: 0;
+}
