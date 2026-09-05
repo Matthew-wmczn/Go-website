@@ -22,7 +22,8 @@ header {
     font-size: 0.8vw;
     top:0;
     z-index:1000;   
-    border-bottom: 1.5px solid gray;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
 
 }
 
@@ -48,10 +49,12 @@ header {
 
 /* --- Footer --- */
 footer {
-    border-top: 1.5px solid gray;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2); 
     padding: 1vw 2vw;
     font-size: 0.9vw;
-    color: #222; 
+    border-radius: 8px;
+
+
 }
 
 
@@ -108,8 +111,14 @@ footer {
     color: white;
     font-size: 2.2vw;
     font-weight: 400;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;    
 
 
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
 }
 
 .card-text{
