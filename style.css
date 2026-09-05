@@ -22,7 +22,8 @@ header {
     font-size: 0.8vw;
     top:0;
     z-index:1000;   
-    border-bottom: 1.5px solid gray;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2); 
+    border-radius: 8px;
 
 }
 
@@ -33,25 +34,30 @@ header {
 }
 
 .nav-functions {
-    padding: 10px 15px;
-    transition: color 0.3s ease;
+    color: black;
+    padding: 10px 16px;
     margin-left: 20px; 
-    text-decoration: none;
-    color: black;     
+    text-decoration: none;    
+    border-radius: 42%;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;     
 }
 
  .nav-functions:hover,
  .nav-functions.active {
-    color: gray;
-    border-bottom: 2px solid gray;
-}
+    box-shadow: 0 0.4vw 0.7vw rgba(0, 0, 0, 0.4); 
+    transform :translateY(-3px);    
+
+} 
 
 /* --- Footer --- */
 footer {
-    border-top: 1.5px solid gray;
+    box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2); 
     padding: 1vw 2vw;
     font-size: 0.9vw;
-    color: #222; 
+    border-radius: 8px;
+
+
 }
 
 
@@ -108,8 +114,14 @@ footer {
     color: white;
     font-size: 2.2vw;
     font-weight: 400;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;    
 
 
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.4vw 0.4vw rgba(0, 0, 0, 0.3);
 }
 
 .card-text{
