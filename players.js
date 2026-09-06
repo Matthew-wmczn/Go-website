@@ -28,14 +28,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageEl = document.getElementById("slide-image");
     const dots = document.querySelectorAll(".dot");
     const slideshowContainer = document.querySelector(".slideshow-container");
+    const leftArrow = document.getElementById("left-arrow");
+    const rightArrow = document.getElementById("right-arrow");
 
     let isAnimating = false;
+    let currentIndex = 0;
 
     function updateSlide(index) {
+        if (index === currentIndex || isAnimating) return;
+        
+        // Content rotation
+        if (index < 0) {
+            index = slideData.length - 1;
+        } else if (index >= slideData.length) {
+            index = 0;
+        }
+
         const data = slideData[index];
-        if (!data || isAnimating) return;
+        if (!data) return;
 
         isAnimating = true;
+        currentIndex = index;
 
         // Fade Out
         slideshowContainer.classList.add("fading");
@@ -49,8 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update active dot styling
             dots.forEach(dot => dot.classList.remove("active"));
-            if (dots[index]) {
-                dots[index].classList.add("active");
+            if (dots[currentIndex]) {
+                dots[currentIndex].classList.add("active");
             }
 
             // Fade In
@@ -69,4 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
             updateSlide(index);
         });
     });
+
+    // Arrow button event listeners
+    if (leftArrow) {
+        leftArrow.addEventListener("click", () => updateSlide(currentIndex - 1));
+    }
+    if (rightArrow) {
+        rightArrow.addEventListener("click", () => updateSlide(currentIndex + 1));
+    }
 });
