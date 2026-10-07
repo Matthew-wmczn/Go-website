@@ -21,7 +21,7 @@ header {
     position: sticky;
     font-size: 0.8vw;
     top:0;
-    z-index:1000;   
+    z-index: 1000;   
     box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.2); 
     border-radius: 8px;
 
@@ -169,7 +169,7 @@ footer {
 
 /* Content Page Description Column */
 .description-column {
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     line-height: 1.7;
 }
 
